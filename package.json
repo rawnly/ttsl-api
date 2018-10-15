@@ -1,0 +1,14 @@
+{
+  "name": "dhanish-lisbon-boat",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "got": "^9.2.2",
+    "jsdom": "^12.2.0"
+  },
+}
