@@ -14,7 +14,7 @@ Just enter in the project folder and install dependencies via NPM or YARN
 ## Running
 Run the `start` script via `npm start` or `yarn start`
 
-## Routes
+## Routes
 - / -- Get all programs
 - /today -- Get todays program
 - /saturday -- Get Satuday program
