@@ -5,6 +5,12 @@ const getHours = require('./libs/get-hours')
 
 const app = Express();
 
+app.use((req, res, next) => {
+    console.log(req.path);
+
+    next()
+})
+
 app.get('/', async (req, res) => {
     let days = await getHours();
     let sunday = await getHours("sunday");
@@ -31,7 +37,12 @@ app.get('/every-day', async (req, res) => {
 app.get('/today', async (req, res) => {
     const now = new Date();
     const today = [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday' ][now.getDay() - 1]
+
+    console.log(today)
+
     const hours = await getHours(today);
+
+    console.log(hours)
 
     res.jsonp({ hours })
 })
